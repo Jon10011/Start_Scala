@@ -47,5 +47,12 @@ object ForDemo02 {
     for (i <- 1 to 10 if i % 2 == 1) {
       println(s" 第${i}次输出" + i)
     }
+    println("-----while--------------------------------")
+    var i = 0
+    while (i < 10) {
+      println(s"hello scala${"--->>>"+i}")
+      i += 1
+    }
+
   }
 }
