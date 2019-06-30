@@ -50,9 +50,15 @@ object ForDemo02 {
     println("-----while--------------------------------")
     var i = 0
     while (i < 10) {
-      println(s"hello scala${"--->>>"+i}")
+      println(s"hello scala${"--->>>" + i}")
       i += 1
     }
-
+    println("-----do while--------------------------------")
+    var j = 0
+    do {
+      println(s"hello scala${"--->>>" + j}")
+      j += 1
+    } while (j < 10)
+    //建议能使用for循环就使用for循环，循环不建议超过三层
   }
 }
