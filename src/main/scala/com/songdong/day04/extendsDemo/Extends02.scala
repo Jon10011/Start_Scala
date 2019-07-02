@@ -19,7 +19,7 @@ class Base {
     println("base 100")
   }
 
-  protected def test200(): Unit = { // ?
+  protected def test200(): Unit = { // public
     println("base 200")
   }
 
@@ -35,6 +35,6 @@ class Sub extends Base {
     this.n2 = 40
     println("范围" + this.n1 + " " + this.n2)
     test100() //
-    test200() // }
+    test200() //
   }
 }
