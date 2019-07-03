@@ -20,6 +20,7 @@ class A1 {
 }
 
 //2,val只能重写另外一个val属性
+//如果val改成var则会报错，因为只重写了getter方法，没有重写setter方法
 class B1 extends A1 {
   override val age: Int = 20 //public age()
 }
