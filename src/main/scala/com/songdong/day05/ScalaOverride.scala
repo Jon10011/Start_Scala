@@ -19,6 +19,18 @@ class A1 {
   val age: Int = 10 //public age()
 }
 
+//2,val只能重写另外一个val属性
 class B1 extends A1 {
   override val age: Int = 20 //public age()
+}
+
+//2,重写不带参数的def
+class C1 {
+  def sal():Int={
+    return 10
+  }
+}
+
+class D1 extends C1{
+  override val sal:Int = 0
 }
