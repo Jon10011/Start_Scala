@@ -1,6 +1,6 @@
 package com.songdong.day05
 
-object ScalaAbstractDemo01 {
+object ScalaAbstractDemo02 {
   def main(args: Array[String]): Unit = {
     println("ok~~")
     // 默认情况下，一个抽象类是不能实例化的，但是你实例化时，动态的实现了抽象类的所有
@@ -9,7 +9,10 @@ object ScalaAbstractDemo01 {
       override def sayHello(): Unit = {
         println("ok2")
       }
+
+      override var food: String = _
     }
+    animal.sayHello()
   }
 }
 
