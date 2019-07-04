@@ -18,6 +18,19 @@ object AddTraits {
     //2. 向数据库
     //3. 插入数据 100
     mysql.insert(100)
+
+    println("---------------------------------------------")
+    //练习
+    val mySQL2 = new MySQL4 with File4 with DB4
+    //构建顺序or声明顺序：从左到右
+    //    Data4
+    //    File4
+    //    DB4
+    mySQL2.insert(909)
+    //执行顺序：从右到左
+    //    向数据库
+    //    向文件
+    //    插入数据 = 909
   }
 }
 
@@ -49,6 +62,9 @@ trait File4 extends Data4 { //特质，继承 Data4
   override def insert(id: Int): Unit = { // 重写 Data4 的 insert
     println("向文件")
     super.insert(id) //调用了 insert 方法(难点)，这里 super 在动态混入时，不一定是父类
+    //如果想要直接调用Data4的insert方法可以指定如下
+    //说明super[?].?的类型。必须是当前特质的直接父特质（超类）
+    //super[Data4].insert(id)
   }
 }
 
