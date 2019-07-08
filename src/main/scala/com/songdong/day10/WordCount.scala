@@ -27,6 +27,7 @@ object WordCount {
       * 对元祖统计大小
       */
     val res4 = res3.map((x: (String, List[(String, Int)])) => (x._1, x._2.size))
+
     //res3.map(x => (x._1, x._2.size))
     //val res4 = res3.map(x => (_._1, _._2.size)) ？？？
     println(s"res4=${res4}")
